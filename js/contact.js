@@ -143,7 +143,7 @@
 
         const subject = encodeURIComponent(`Project Inquiry — ${data.businessName}`);
         const body = encodeURIComponent(buildMailtoBody(data));
-        const mailto = `mailto:saucedawebdesign@gmail.com?subject=${subject}&body=${body}`;
+        const mailto = `mailto:ramon@saucedawebdesign.com?subject=${subject}&body=${body}`;
 
         window.location.href = mailto;
 
