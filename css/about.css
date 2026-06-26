@@ -1,0 +1,105 @@
+.about {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: clamp(3rem, 6vw, 5rem);
+    align-items: center;
+}
+
+.about-photo {
+    position: relative;
+}
+
+.photo-frame {
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--bg-elevated);
+    aspect-ratio: 4 / 5;
+    max-width: 380px;
+}
+
+.photo-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: var(--text-muted);
+    background:
+        radial-gradient(ellipse at 50% 30%, rgba(37, 99, 235, 0.08) 0%, transparent 60%),
+        var(--bg-elevated);
+}
+
+.photo-placeholder span {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+}
+
+.about-veteran-badge {
+    position: absolute;
+    bottom: -0.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5625rem 1rem;
+    background: var(--bg-primary);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.about-veteran-badge svg {
+    color: var(--blue-accent);
+}
+
+.about-content h2 {
+    margin-bottom: 1.75rem;
+}
+
+.about-text {
+    color: var(--text-secondary);
+    font-size: 1.0625rem;
+    line-height: 1.8;
+    margin-bottom: 1.25rem;
+    max-width: 540px;
+}
+
+.about-text strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.about-content .btn {
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-photo {
+        max-width: 320px;
+        margin: 0 auto 2rem;
+    }
+
+    .about-text { max-width: none; }
+}
+
+@media (max-width: 480px) {
+    .photo-frame { max-width: 100%; }
+}

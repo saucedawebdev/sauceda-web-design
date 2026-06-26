@@ -1,0 +1,39 @@
+/* Reveal animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition:
+        opacity 0.9s var(--ease),
+        transform 0.9s var(--ease);
+    transition-delay: var(--delay, 0s);
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-delay-1 { --delay: 0.1s; }
+.reveal-delay-2 { --delay: 0.2s; }
+.reveal-delay-3 { --delay: 0.3s; }
+.reveal-delay-4 { --delay: 0.4s; }
+
+@keyframes glow-drift {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(28px, 20px) scale(1.1); }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .reveal-scale,
+    .reveal-fade {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .hero-glow {
+        animation: none !important;
+    }
+}

@@ -1,0 +1,448 @@
+/* Process Page */
+
+.section-header--center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-desc--center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Page Hero */
+.page-hero-bg {
+    position: absolute;
+    inset: 0;
+    background: var(--bg-primary);
+}
+
+.page-hero {
+    position: relative;
+    min-height: 72vh;
+    display: flex;
+    align-items: center;
+    padding-top: var(--header-h);
+    overflow: hidden;
+}
+
+.page-hero .hero-glow--1 {
+    width: 50vw;
+    max-width: 600px;
+    height: 50vw;
+    max-height: 600px;
+    background: rgba(37, 99, 235, 0.1);
+    top: -10%;
+    right: -5%;
+}
+
+.page-hero .hero-glow--2 {
+    width: 35vw;
+    max-width: 420px;
+    height: 35vw;
+    max-height: 420px;
+    background: rgba(59, 130, 246, 0.06);
+    bottom: 0;
+    left: -8%;
+}
+
+.page-hero-content {
+    position: relative;
+    text-align: center;
+    max-width: 760px;
+    padding: clamp(4rem, 8vw, 6rem) 0;
+}
+
+.page-hero-text {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 620px;
+    margin: 0 auto 2.75rem;
+}
+
+.page-hero-buttons {
+    display: flex;
+    gap: 0.875rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Detailed Timeline */
+.process-timeline-section {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border);
+}
+
+.timeline-detailed {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1rem;
+    position: relative;
+    padding-top: 1.5rem;
+}
+
+.timeline-detailed::before {
+    content: '';
+    position: absolute;
+    top: 2.75rem;
+    left: 5%;
+    right: 5%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), var(--border), transparent);
+    z-index: 0;
+}
+
+.timeline-card {
+    padding: 1.75rem 1.25rem;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.timeline-card .timeline-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    margin: 0;
+    transition: color 0.3s ease, border-color 0.3s ease, background 0.3s ease, transform 0.4s var(--ease);
+}
+
+.timeline-card:hover .timeline-icon {
+    color: var(--blue-accent);
+    border-color: rgba(37, 99, 235, 0.25);
+    background: var(--blue-muted);
+    transform: translateY(-3px);
+}
+
+.timeline-card .timeline-num {
+    font-size: 0.625rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+}
+
+.timeline-card h3 {
+    font-size: 0.9375rem;
+    margin-bottom: 0.625rem;
+    line-height: 1.3;
+}
+
+.timeline-card p {
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    flex: 1;
+}
+
+/* What You'll Need */
+.need-section {
+    background: var(--bg-primary);
+    border-top: 1px solid var(--border);
+}
+
+.checklist-grid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.checklist-item {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    padding: 1.25rem 1.5rem;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
+}
+
+.checklist-item svg {
+    flex-shrink: 0;
+    color: var(--blue-accent);
+    opacity: 0.8;
+}
+
+.checklist-item:hover {
+    color: var(--text-primary);
+}
+
+/* What I Handle */
+.handle-section {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border);
+}
+
+.handle-grid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 2rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    background: var(--glass);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.handle-item {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    padding: 0.625rem 0.875rem;
+    border-radius: var(--radius);
+    transition: color 0.3s ease, background 0.3s ease;
+}
+
+.handle-item svg {
+    flex-shrink: 0;
+    color: var(--blue-accent);
+}
+
+.handle-item:hover {
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+/* Timeline Expectations */
+.timing-section {
+    background: var(--bg-primary);
+    border-top: 1px solid var(--border);
+}
+
+.timing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.timing-card {
+    text-align: center;
+    padding: 2.5rem 2rem;
+}
+
+.timing-label {
+    display: block;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+}
+
+.timing-value {
+    display: block;
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--blue-accent);
+    margin-bottom: 0.875rem;
+    line-height: 1;
+}
+
+.timing-card p {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+}
+
+.timing-note {
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    font-style: italic;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+/* Client Experience */
+.experience-section {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border);
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.experience-card {
+    padding: 2rem;
+}
+
+.experience-icon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    margin-bottom: 1.25rem;
+    transition: color 0.3s ease, border-color 0.3s ease, background 0.3s ease, transform 0.4s var(--ease);
+}
+
+.experience-card:hover .experience-icon {
+    color: var(--blue-accent);
+    border-color: rgba(37, 99, 235, 0.2);
+    background: var(--blue-muted);
+    transform: translateY(-3px);
+}
+
+.experience-card h3 {
+    margin-bottom: 0.625rem;
+}
+
+.experience-card p {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* FAQ override for longer answers */
+.process-timeline-section + .need-section ~ .faq .faq-item.open .faq-answer,
+.faq .faq-item.open .faq-answer {
+    max-height: 320px;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .timeline-detailed {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .timeline-detailed::before {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .timeline-detailed {
+        grid-template-columns: 1fr;
+        max-width: 520px;
+        margin: 0 auto;
+        gap: 1rem;
+        padding-top: 0;
+    }
+
+    .timeline-card {
+        display: grid;
+        grid-template-columns: 48px 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 0 1.25rem;
+        padding: 1.75rem;
+    }
+
+    .timeline-card-header {
+        grid-row: 1 / 4;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 0.5rem;
+        margin-bottom: 0;
+    }
+
+    .timeline-card .timeline-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .timeline-card .timeline-num {
+        grid-column: 2;
+    }
+
+    .timeline-card h3 {
+        grid-column: 2;
+    }
+
+    .timeline-card p {
+        grid-column: 2;
+    }
+
+    .checklist-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .handle-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .timing-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .experience-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .page-hero { min-height: auto; }
+
+    .page-hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .checklist-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .handle-grid {
+        grid-template-columns: 1fr;
+        padding: 1.25rem;
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1201px) {
+    .timeline-card::after {
+        content: '';
+        position: absolute;
+        top: 2rem;
+        right: -0.5rem;
+        width: 1rem;
+        height: 1px;
+        background: var(--border);
+    }
+
+    .timeline-card:last-child::after {
+        display: none;
+    }
+}

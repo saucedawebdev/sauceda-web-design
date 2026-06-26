@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Sauceda Web Design — Get a free homepage mockup and start your project. Veteran-owned web studio serving businesses nationwide.">
+    <meta name="theme-color" content="#05070D">
+    <meta property="og:title" content="Contact — Sauceda Web Design">
+    <meta property="og:description" content="Let's build your business a website that stands out. Start your project with a free consultation and homepage mockup.">
+    <meta property="og:type" content="website">
+    <title>Contact — Sauceda Web Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/why.css">
+    <link rel="stylesheet" href="css/faq.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/contact-page.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/premium.css">
+</head>
+<body>
+
+    <a href="#main" class="skip-link">Skip to content</a>
+    <div class="noise" aria-hidden="true"></div>
+
+    <header class="header" id="header">
+        <div class="header__inner">
+            <a href="index.html" class="logo" aria-label="Sauceda Web Design — Home">
+                <img src="images/SaucedaWD Logo.jpeg" alt="" width="234" height="58" fetchpriority="high">
+            </a>
+            <nav class="nav" id="nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="services.html">Services</a>
+                <a href="process.html">Process</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+            <div class="header__actions">
+                <a href="#contact-form" class="btn btn-primary btn-glow header-cta">Get Free Mockup</a>
+                <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav">
+                    <span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+
+        <!-- Hero -->
+        <section class="page-hero page-hero--full" id="hero" aria-labelledby="hero-heading">
+            <div class="page-hero-bg" aria-hidden="true">
+                <div class="hero-grid-lines"></div>
+                <div class="hero-glow hero-glow--1"></div>
+                <div class="hero-glow hero-glow--2"></div>
+                <div class="hero-glow hero-glow--3"></div>
+                <div class="hero-vignette"></div>
+            </div>
+            <div class="container page-hero-content">
+                <p class="eyebrow reveal">Contact</p>
+                <h1 id="hero-heading" class="reveal reveal-delay-1">Let's Build Your Business a Website That Stands Out</h1>
+                <p class="page-hero-text reveal reveal-delay-2">
+                    Whether you're starting a new business, redesigning an outdated website, or simply exploring your options, I'd love to hear about your project. Let's create something that helps your business grow.
+                </p>
+                <div class="page-hero-buttons reveal reveal-delay-3">
+                    <a href="#contact-form" class="btn btn-primary btn-glow">Start My Project</a>
+                    <a href="portfolio.html" class="btn btn-secondary">View Portfolio</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="section contact-form-section" id="contact-form" aria-labelledby="form-heading">
+            <div class="container">
+                <header class="section-header section-header--center reveal">
+                    <p class="eyebrow">Start Your Project</p>
+                    <h2 id="form-heading">Tell me about your business.</h2>
+                    <p class="section-desc section-desc--center">Fill out the form below and I'll get back to you within 24 hours. No pressure, no obligation — just a friendly conversation about your goals.</p>
+                </header>
+
+                <div class="contact-form-wrapper reveal">
+                    <form class="contact-form glass-card" id="contactForm" novalidate aria-describedby="form-error">
+                        <div class="form-alert form-alert--error" id="formError" role="alert" aria-live="assertive">
+                            <svg class="form-alert-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                            <span class="form-alert-text"></span>
+                        </div>
+
+                        <div class="form-fields">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label class="form-label" for="firstName">First Name</label>
+                                    <input class="form-input" type="text" id="firstName" name="firstName" autocomplete="given-name" required aria-required="true">
+                                    <span class="form-error" data-error-for="firstName" role="alert"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="lastName">Last Name</label>
+                                    <input class="form-input" type="text" id="lastName" name="lastName" autocomplete="family-name" required aria-required="true">
+                                    <span class="form-error" data-error-for="lastName" role="alert"></span>
+                                </div>
+                                <div class="form-group form-group--full">
+                                    <label class="form-label" for="businessName">Business Name</label>
+                                    <input class="form-input" type="text" id="businessName" name="businessName" autocomplete="organization" required aria-required="true">
+                                    <span class="form-error" data-error-for="businessName" role="alert"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="email">Email Address</label>
+                                    <input class="form-input" type="email" id="email" name="email" autocomplete="email" required aria-required="true">
+                                    <span class="form-error" data-error-for="email" role="alert"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="phone">Phone Number <span class="form-label-optional">(Optional)</span></label>
+                                    <input class="form-input" type="tel" id="phone" name="phone" autocomplete="tel">
+                                    <span class="form-error" data-error-for="phone" role="alert"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="industry">Business Industry</label>
+                                    <input class="form-input" type="text" id="industry" name="industry" placeholder="e.g. Home Services, Restaurant, Retail" required aria-required="true">
+                                    <span class="form-error" data-error-for="industry" role="alert"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="projectType">Project Type</label>
+                                    <select class="form-select" id="projectType" name="projectType" required aria-required="true">
+                                        <option value="" disabled selected>Select a project type</option>
+                                        <option value="New Website">New Website</option>
+                                        <option value="Website Redesign">Website Redesign</option>
+                                        <option value="Landing Page">Landing Page</option>
+                                        <option value="Not Sure — Need Guidance">Not Sure — Need Guidance</option>
+                                    </select>
+                                    <span class="form-error" data-error-for="projectType" role="alert"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="pageCount">Estimated Number of Pages</label>
+                                    <select class="form-select" id="pageCount" name="pageCount" required aria-required="true">
+                                        <option value="" disabled selected>Select page count</option>
+                                        <option value="1–3 pages">1–3 pages</option>
+                                        <option value="4–6 pages">4–6 pages</option>
+                                        <option value="7–10 pages">7–10 pages</option>
+                                        <option value="10+ pages">10+ pages</option>
+                                        <option value="Not sure yet">Not sure yet</option>
+                                    </select>
+                                    <span class="form-error" data-error-for="pageCount" role="alert"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="currentWebsite">Current Website <span class="form-label-optional">(Optional)</span></label>
+                                    <input class="form-input" type="url" id="currentWebsite" name="currentWebsite" placeholder="https://yourwebsite.com" autocomplete="url">
+                                    <span class="form-error" data-error-for="currentWebsite" role="alert"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="budget">Project Budget <span class="form-label-optional">(Optional)</span></label>
+                                    <select class="form-select" id="budget" name="budget">
+                                        <option value="" selected>Prefer not to say</option>
+                                        <option value="Under $1,500">Under $1,500</option>
+                                        <option value="$1,500 – $3,000">$1,500 – $3,000</option>
+                                        <option value="$3,000 – $5,000">$3,000 – $5,000</option>
+                                        <option value="$5,000+">$5,000+</option>
+                                    </select>
+                                    <span class="form-error" data-error-for="budget" role="alert"></span>
+                                </div>
+                                <div class="form-group form-group--full">
+                                    <label class="form-label" for="timeline">Project Timeline</label>
+                                    <select class="form-select" id="timeline" name="timeline" required aria-required="true">
+                                        <option value="" disabled selected>When do you need this?</option>
+                                        <option value="ASAP">ASAP</option>
+                                        <option value="Within 1 month">Within 1 month</option>
+                                        <option value="1–3 months">1–3 months</option>
+                                        <option value="3–6 months">3–6 months</option>
+                                        <option value="Flexible / exploring options">Flexible / exploring options</option>
+                                    </select>
+                                    <span class="form-error" data-error-for="timeline" role="alert"></span>
+                                </div>
+                                <div class="form-group form-group--full">
+                                    <label class="form-label" for="message">Tell Me About Your Project</label>
+                                    <textarea class="form-textarea" id="message" name="message" rows="6" placeholder="Share your goals, target audience, design preferences, or anything else that would help me understand your vision." required aria-required="true"></textarea>
+                                    <span class="form-error" data-error-for="message" role="alert"></span>
+                                </div>
+                                <div class="form-group form-group--full">
+                                    <div class="form-checkbox-group">
+                                        <input class="form-checkbox" type="checkbox" id="consent" name="consent" required aria-required="true">
+                                        <label class="form-checkbox-label" for="consent">I agree to be contacted regarding my project.</label>
+                                    </div>
+                                    <span class="form-error" data-error-for="consent" role="alert"></span>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary btn-glow btn-lg form-submit" aria-busy="false">
+                                    <span class="btn-text">Send Project Inquiry</span>
+                                    <span class="btn-spinner" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-success-panel" id="formSuccess" aria-hidden="true" role="status">
+                            <div class="form-success-icon" aria-hidden="true">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            </div>
+                            <h3>Inquiry Sent Successfully</h3>
+                            <p>Thank you for reaching out! Your email client should open with your project details. I'll review your inquiry and respond within 24 hours.</p>
+                            <a href="mailto:saucedawebdesign@gmail.com" class="btn btn-secondary">Email Directly</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Information -->
+        <section class="section contact-info-section" id="contact-info" aria-labelledby="info-heading">
+            <div class="container">
+                <header class="section-header section-header--center reveal">
+                    <p class="eyebrow">Get In Touch</p>
+                    <h2 id="info-heading">Contact information.</h2>
+                    <p class="section-desc section-desc--center">Prefer to reach out directly? Here are all the ways to connect with Sauceda Web Design.</p>
+                </header>
+                <div class="contact-info-grid" data-stagger="80">
+                    <article class="contact-info-card glass-card reveal">
+                        <div class="contact-info-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                        </div>
+                        <h3>Business Name</h3>
+                        <p class="contact-info-value">Sauceda Web Design</p>
+                        <p class="contact-info-detail">Veteran-owned web design studio.</p>
+                    </article>
+                    <article class="contact-info-card glass-card reveal">
+                        <div class="contact-info-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <h3>Email</h3>
+                        <a href="mailto:saucedawebdesign@gmail.com" class="contact-info-value">saucedawebdesign@gmail.com</a>
+                        <p class="contact-info-detail">The fastest way to reach me.</p>
+                    </article>
+                    <article class="contact-info-card glass-card reveal">
+                        <div class="contact-info-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <h3>Service Area</h3>
+                        <p class="contact-info-value">Rio Grande Valley, Texas</p>
+                        <p class="contact-info-detail">Serving clients nationwide.</p>
+                    </article>
+                    <article class="contact-info-card glass-card reveal">
+                        <div class="contact-info-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <h3>Business Hours</h3>
+                        <p class="contact-info-value">Monday – Friday</p>
+                        <p class="contact-info-detail">8:00 AM – 6:00 PM (CST)</p>
+                    </article>
+                    <article class="contact-info-card glass-card reveal">
+                        <div class="contact-info-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        </div>
+                        <h3>Response Time</h3>
+                        <p class="contact-info-value">Typically within 24 hours.</p>
+                        <p class="contact-info-detail">Usually much sooner on weekdays.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- What Happens Next -->
+        <section class="section next-steps-section" id="next-steps" aria-labelledby="steps-heading">
+            <div class="container">
+                <header class="section-header section-header--center reveal">
+                    <p class="eyebrow">What Happens Next?</p>
+                    <h2 id="steps-heading">Here's what to expect.</h2>
+                    <p class="section-desc section-desc--center">No surprises, no confusion — just a clear, straightforward process from your first message to launch day.</p>
+                </header>
+                <ol class="next-steps-timeline" data-stagger="100">
+                    <li class="next-step-card glass-card reveal">
+                        <div class="next-step-header">
+                            <span class="next-step-num">Step 1</span>
+                            <div class="next-step-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                            </div>
+                        </div>
+                        <h3>You send your inquiry.</h3>
+                    </li>
+                    <li class="next-step-card glass-card reveal">
+                        <div class="next-step-header">
+                            <span class="next-step-num">Step 2</span>
+                            <div class="next-step-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                            </div>
+                        </div>
+                        <h3>I review your project.</h3>
+                    </li>
+                    <li class="next-step-card glass-card reveal">
+                        <div class="next-step-header">
+                            <span class="next-step-num">Step 3</span>
+                            <div class="next-step-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                            </div>
+                        </div>
+                        <h3>We schedule a consultation.</h3>
+                    </li>
+                    <li class="next-step-card glass-card reveal">
+                        <div class="next-step-header">
+                            <span class="next-step-num">Step 4</span>
+                            <div class="next-step-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                            </div>
+                        </div>
+                        <h3>You'll receive a custom homepage mockup.</h3>
+                    </li>
+                    <li class="next-step-card glass-card reveal">
+                        <div class="next-step-header">
+                            <span class="next-step-num">Step 5</span>
+                            <div class="next-step-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                            </div>
+                        </div>
+                        <h3>Once approved, I begin development.</h3>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Why Contact -->
+        <section class="section why-contact-section" id="why-contact" aria-labelledby="why-contact-heading">
+            <div class="container">
+                <header class="section-header section-header--center reveal">
+                    <p class="eyebrow">Why Sauceda Web Design</p>
+                    <h2 id="why-contact-heading">Why contact Sauceda Web Design?</h2>
+                    <p class="section-desc section-desc--center">You're not just hiring a developer — you're partnering with someone who genuinely cares about your business success.</p>
+                </header>
+                <div class="why-contact-grid" data-stagger="60">
+                    <article class="why-contact-card glass-card reveal">
+                        <div class="why-contact-icon" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
+                        </div>
+                        <h3>Free Homepage Mockup</h3>
+                    </article>
+                    <article class="why-contact-card glass-card reveal">
+                        <div class="why-contact-icon" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        </div>
+                        <h3>Personalized Service</h3>
+                    </article>
+                    <article class="why-contact-card glass-card reveal">
+                        <div class="why-contact-icon" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+                        </div>
+                        <h3>Veteran-Owned Business</h3>
+                    </article>
+                    <article class="why-contact-card glass-card reveal">
+                        <div class="why-contact-icon" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg>
+                        </div>
+                        <h3>Responsive Websites</h3>
+                    </article>
+                    <article class="why-contact-card glass-card reveal">
+                        <div class="why-contact-icon" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                        </div>
+                        <h3>Fast Communication</h3>
+                    </article>
+                    <article class="why-contact-card glass-card reveal">
+                        <div class="why-contact-icon" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        </div>
+                        <h3>Modern Design</h3>
+                    </article>
+                    <article class="why-contact-card glass-card reveal">
+                        <div class="why-contact-icon" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                        </div>
+                        <h3>No Cookie-Cutter Templates</h3>
+                    </article>
+                    <article class="why-contact-card glass-card reveal">
+                        <div class="why-contact-icon" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        </div>
+                        <h3>Built Around Your Goals</h3>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section faq" id="faq" aria-labelledby="faq-heading">
+            <div class="container">
+                <header class="section-header section-header--center reveal">
+                    <p class="eyebrow">Frequently Asked Questions</p>
+                    <h2 id="faq-heading">Common questions before reaching out.</h2>
+                </header>
+                <div class="faq-list reveal" role="list">
+                    <div class="faq-item" role="listitem">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-1" id="faq-q-1">
+                            <span>How quickly will you respond?</span>
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </button>
+                        <div class="faq-answer" id="faq-1" role="region" aria-labelledby="faq-q-1">
+                            <p>I respond to all inquiries within 24 hours, typically much sooner during business hours (Monday–Friday, 8 AM–6 PM CST). If you haven't heard back, check your spam folder or email me directly at saucedawebdesign@gmail.com.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" role="listitem">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-2" id="faq-q-2">
+                            <span>Do I need a domain before contacting you?</span>
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </button>
+                        <div class="faq-answer" id="faq-2" role="region" aria-labelledby="faq-q-2">
+                            <p>Not at all. You can reach out at any stage — even if you're just exploring ideas. I can help you choose a domain name and set up hosting when the time comes.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" role="listitem">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-3" id="faq-q-3">
+                            <span>How do we communicate during the project?</span>
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </button>
+                        <div class="faq-answer" id="faq-3" role="region" aria-labelledby="faq-q-3">
+                            <p>I primarily communicate through email to keep everything organized and easy to reference. You'll receive regular progress updates, design previews, and revision requests throughout the project, and I'll respond promptly to any questions you have.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" role="listitem">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-4" id="faq-q-4">
+                            <span>Do you work with businesses outside Texas?</span>
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </button>
+                        <div class="faq-answer" id="faq-4" role="region" aria-labelledby="faq-q-4">
+                            <p>Yes. While I'm based in the Rio Grande Valley, I work with clients across the United States. Location doesn't matter — clear communication does.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" role="listitem">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-5" id="faq-q-5">
+                            <span>Can you redesign my existing website?</span>
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </button>
+                        <div class="faq-answer" id="faq-5" role="region" aria-labelledby="faq-q-5">
+                            <p>Website redesigns are one of my most common projects. Share your current site URL in the contact form and I'll start with a free homepage mockup so you can see the new direction before committing.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" role="listitem">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-6" id="faq-q-6">
+                            <span>What happens after I submit the contact form?</span>
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </button>
+                        <div class="faq-answer" id="faq-6" role="region" aria-labelledby="faq-q-6">
+                            <p>I'll review your project details, reach out within 24 hours to schedule a brief consultation, and then create a custom homepage mockup — completely free. Once you approve the direction, we move forward with development.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map -->
+        <section class="section map-section" id="map" aria-labelledby="map-heading">
+            <div class="container">
+                <header class="section-header section-header--center reveal">
+                    <p class="eyebrow">Service Area</p>
+                    <h2 id="map-heading">Based in South Texas. Serving nationwide.</h2>
+                </header>
+                <div class="map-card reveal">
+                    <div class="map-visual" aria-hidden="true">
+                        <svg class="map-svg" viewBox="0 0 400 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M80 60 L340 40 L360 280 L60 300 Z" fill="rgba(37,99,235,0.04)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+                            <path d="M120 100 L280 85 L300 240 L100 255 Z" fill="rgba(37,99,235,0.06)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+                            <path d="M160 140 L240 130 L250 210 L150 218 Z" fill="rgba(37,99,235,0.1)" stroke="rgba(59,130,246,0.2)" stroke-width="1.5"/>
+                            <circle class="map-pin-ring" cx="200" cy="175" r="24" fill="rgba(37,99,235,0.15)" stroke="rgba(59,130,246,0.3)" stroke-width="1"/>
+                            <g class="map-pin">
+                                <path d="M200 155 C192 155 186 161 186 169 C186 179 200 195 200 195 C200 195 214 179 214 169 C214 161 208 155 200 155Z" fill="#2563EB" stroke="#3B82F6" stroke-width="1"/>
+                                <circle cx="200" cy="169" r="4" fill="#FFFFFF"/>
+                            </g>
+                            <text x="200" y="230" text-anchor="middle" fill="rgba(161,161,170,0.6)" font-size="11" font-family="Inter, sans-serif" letter-spacing="0.08em">RIO GRANDE VALLEY</text>
+                        </svg>
+                    </div>
+                    <div class="map-content">
+                        <div class="map-location">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Rio Grande Valley, Texas
+                        </div>
+                        <h3>Proudly serving the RGV and beyond.</h3>
+                        <p>Although I'm based in South Texas, I work remotely with businesses across the United States. Wherever you are, we can build something great together.</p>
+                        <div class="map-badge">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+                            Remote-friendly · Nationwide service
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section final-cta" id="cta" aria-labelledby="cta-heading">
+            <div class="final-cta-bg" aria-hidden="true"></div>
+            <div class="container">
+                <div class="final-cta-panel reveal">
+                    <p class="eyebrow">Ready to Start?</p>
+                    <h2 id="cta-heading">Ready to Grow Your Business Online?</h2>
+                    <p class="final-cta-desc">Let's create a website that reflects the quality of your business and helps you reach more customers.</p>
+                    <div class="final-cta-buttons">
+                        <a href="mailto:saucedawebdesign@gmail.com?subject=Free%20Homepage%20Mockup%20Request" class="btn btn-primary btn-glow btn-lg">Get a Free Mockup</a>
+                        <a href="mailto:saucedawebdesign@gmail.com?subject=Consultation%20Request" class="btn btn-secondary btn-lg">Schedule a Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo" aria-label="Sauceda Web Design">
+                        <img src="images/SaucedaWD Logo.jpeg" alt="" width="140" height="32" loading="lazy">
+                    </a>
+                    <p class="footer-desc">Premium websites for local businesses. Veteran owned and operated.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="LinkedIn" class="social-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+                        <a href="#" aria-label="Instagram" class="social-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+                        <a href="#" aria-label="Facebook" class="social-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+                    </div>
+                </div>
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <h4>Navigation</h4>
+                    <a href="index.html">Home</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="services.html">Services</a>
+                    <a href="process.html">Process</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <a href="mailto:saucedawebdesign@gmail.com">saucedawebdesign@gmail.com</a>
+                    <p>Crafted with Code. Built for Growth.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sauceda Web Design. Built by Ramon Sauceda.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/navbar.js" defer></script>
+    <script src="js/premium.js" defer></script>
+    <script src="js/animation.js" defer></script>
+    <script src="js/faq.js" defer></script>
+    <script src="js/contact.js" defer></script>
+</body>
+</html>

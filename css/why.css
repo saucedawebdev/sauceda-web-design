@@ -1,0 +1,116 @@
+.section-header--center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-desc--center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-sm {
+    padding: 0.5625rem 1.125rem;
+    font-size: 0.8125rem;
+}
+
+/* Why Choose */
+.why-choose {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border);
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+}
+
+.feature-card {
+    padding: 2rem;
+}
+
+.feature-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    transition: color 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+    color: var(--blue-accent);
+    border-color: rgba(37, 99, 235, 0.2);
+    background: var(--blue-muted);
+}
+
+.feature-card h3 {
+    margin-bottom: 0.75rem;
+}
+
+.feature-card p {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* Why Invest */
+.why-invest {
+    background: var(--bg-primary);
+    border-top: 1px solid var(--border);
+}
+
+.benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.benefit-card {
+    padding: 2rem;
+}
+
+.benefit-stat {
+    display: block;
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--blue-accent);
+    margin-bottom: 0.875rem;
+    line-height: 1;
+}
+
+.benefit-card h3 {
+    margin-bottom: 0.625rem;
+}
+
+.benefit-card p {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+@media (max-width: 1024px) {
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .benefit-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .feature-grid,
+    .benefit-grid {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+        margin: 0 auto;
+    }
+}

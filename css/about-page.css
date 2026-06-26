@@ -1,0 +1,334 @@
+/* About Page */
+
+.section-header--center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-desc--center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Full-screen Hero */
+.page-hero-bg {
+    position: absolute;
+    inset: 0;
+    background: var(--bg-primary);
+}
+
+.page-hero--full {
+    position: relative;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    padding-top: var(--header-h);
+    overflow: hidden;
+}
+
+.page-hero--full .hero-glow--1 {
+    width: 55vw;
+    max-width: 700px;
+    height: 55vw;
+    max-height: 700px;
+    background: rgba(37, 99, 235, 0.09);
+    top: -15%;
+    right: -8%;
+}
+
+.page-hero--full .hero-glow--2 {
+    width: 40vw;
+    max-width: 500px;
+    height: 40vw;
+    max-height: 500px;
+    background: rgba(59, 130, 246, 0.06);
+    bottom: 5%;
+    left: -10%;
+}
+
+.page-hero--full .hero-glow--3 {
+    width: 30vw;
+    max-width: 400px;
+    height: 30vw;
+    max-height: 400px;
+    background: rgba(37, 99, 235, 0.05);
+    top: 40%;
+    left: 35%;
+}
+
+.page-hero-content {
+    position: relative;
+    text-align: center;
+    max-width: 780px;
+    padding: clamp(4rem, 8vw, 6rem) 0;
+}
+
+.page-hero-text {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 620px;
+    margin: 0 auto 2.75rem;
+}
+
+.page-hero-buttons {
+    display: flex;
+    gap: 0.875rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Story */
+.story-section {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border);
+}
+
+.story-section .about-content h2 {
+    margin-bottom: 1.75rem;
+}
+
+/* Mission */
+.mission-section {
+    background: var(--bg-primary);
+    border-top: 1px solid var(--border);
+}
+
+.mission-card {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: clamp(3rem, 6vw, 4.5rem) clamp(2rem, 5vw, 3.5rem);
+    position: relative;
+    overflow: hidden;
+}
+
+.mission-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120%;
+    height: 100%;
+    background: radial-gradient(ellipse, rgba(37, 99, 235, 0.08) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.mission-card > * {
+    position: relative;
+}
+
+.mission-card.glass-card:hover {
+    transform: translateY(-4px);
+}
+
+.mission-card h2 {
+    margin-bottom: 1.5rem;
+}
+
+.mission-text {
+    font-size: 1.1875rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+/* Values */
+.values-section {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border);
+}
+
+/* Why Work With Me */
+.why-work-section {
+    background: var(--bg-primary);
+    border-top: 1px solid var(--border);
+}
+
+.why-work-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.why-work-card {
+    padding: 1.75rem 1.25rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.why-work-icon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    transition: color 0.3s ease, border-color 0.3s ease, background 0.3s ease, transform 0.4s var(--ease);
+}
+
+.why-work-card:hover .why-work-icon {
+    color: var(--blue-accent);
+    border-color: rgba(37, 99, 235, 0.2);
+    background: var(--blue-muted);
+    transform: translateY(-3px);
+}
+
+.why-work-card h3 {
+    font-size: 0.9375rem;
+    line-height: 1.35;
+}
+
+/* Skills */
+.skills-about-section {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border);
+}
+
+.skills-about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.skills-group {
+    padding: 2rem;
+}
+
+.skills-group h3 {
+    font-size: 1rem;
+    color: var(--blue-accent);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.skills-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+}
+
+.skills-list li {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    padding-left: 1rem;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s var(--ease);
+}
+
+.skills-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5625rem;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--blue-accent);
+    opacity: 0.6;
+}
+
+.skills-group:hover .skills-list li {
+    color: var(--text-primary);
+}
+
+/* Approach */
+.approach-section {
+    background: var(--bg-primary);
+    border-top: 1px solid var(--border);
+}
+
+.approach-list {
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.approach-item {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 1.5rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    align-items: start;
+}
+
+.approach-item:last-child {
+    border-bottom: none;
+}
+
+.approach-num {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--blue-accent);
+    padding-top: 0.25rem;
+}
+
+.approach-item h3 {
+    margin-bottom: 0.625rem;
+}
+
+.approach-item p {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    line-height: 1.75;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .why-work-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skills-about-grid {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-hero--full {
+        min-height: auto;
+    }
+
+    .page-hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .why-work-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .approach-item {
+        grid-template-columns: 36px 1fr;
+        gap: 1rem;
+        padding: 1.5rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .why-work-grid {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .mission-text {
+        font-size: 1.0625rem;
+    }
+}
