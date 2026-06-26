@@ -132,7 +132,9 @@
 @media (max-width: 480px) {
     .project-overlay {
         opacity: 1;
-        background: rgba(5, 7, 13, 0.5);
+        background: linear-gradient(to top, rgba(5, 7, 13, 0.8) 0%, transparent 50%);
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
         align-items: flex-end;
         padding-bottom: 1rem;
     }
