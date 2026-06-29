@@ -8,9 +8,7 @@
     const successPanel = document.getElementById('formSuccess');
     const errorAlert = document.getElementById('formError');
     const errorAlertText = errorAlert?.querySelector('.form-alert-text');
-
-    const SUBMIT_ERROR_MESSAGE =
-        'Something went wrong while submitting your request. Please try again or email me directly at ramon@saucedawebdesign.com.';
+    const errorEmailBtn = errorAlert?.querySelector('.form-alert-email');
 
     let isSubmitting = false;
 
@@ -71,13 +69,26 @@
 
     function hideGlobalError() {
         if (!errorAlert) return;
-        errorAlert.classList.remove('is-visible');
+        errorAlert.classList.remove('is-visible', 'form-alert--with-action');
+        if (errorEmailBtn) errorEmailBtn.hidden = true;
     }
 
-    function showGlobalError(message) {
+    function showValidationError(message) {
         if (!errorAlert || !errorAlertText) return;
         errorAlertText.textContent = message;
+        if (errorEmailBtn) errorEmailBtn.hidden = true;
+        errorAlert.classList.remove('form-alert--with-action');
         errorAlert.classList.add('is-visible');
+        errorAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function showSubmitError() {
+        if (!errorAlert || !errorAlertText) return;
+        errorAlertText.innerHTML =
+            '<p>Something went wrong while submitting your request.</p>' +
+            '<p>Please try again or email me directly at ramon@saucedawebdesign.com.</p>';
+        if (errorEmailBtn) errorEmailBtn.hidden = false;
+        errorAlert.classList.add('is-visible', 'form-alert--with-action');
         errorAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
 
@@ -164,7 +175,7 @@
         hideGlobalError();
 
         if (!validateForm()) {
-            showGlobalError('Please correct the highlighted fields before submitting.');
+            showValidationError('Please correct the highlighted fields before submitting.');
             const firstInvalid = form.querySelector('.is-invalid');
             firstInvalid?.focus();
             return;
@@ -177,7 +188,7 @@
             const didSubmit = await submitToFormspree(formData);
 
             if (!didSubmit) {
-                showGlobalError(SUBMIT_ERROR_MESSAGE);
+                showSubmitError();
                 return;
             }
 
@@ -185,7 +196,7 @@
             showSuccessState();
         } catch (error) {
             console.error('Form submission error:', error);
-            showGlobalError(SUBMIT_ERROR_MESSAGE);
+            showSubmitError();
         } finally {
             setSubmittingState(false);
         }
