@@ -612,49 +612,18 @@
 
 .map-visual {
     position: relative;
-    background:
-        radial-gradient(ellipse 80% 60% at 60% 70%, rgba(37, 99, 235, 0.15) 0%, transparent 55%),
-        linear-gradient(160deg, var(--bg-elevated) 0%, var(--bg-primary) 100%);
+    background: var(--bg-elevated);
     overflow: hidden;
     min-height: 320px;
 }
 
-.map-visual::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image:
-        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-    background-size: 40px 40px;
-    opacity: 0.5;
-}
-
-.map-svg {
+.map-embed {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
-    padding: 2rem;
-}
-
-.map-pin {
-    animation: mapPinPulse 3s ease-in-out infinite;
-}
-
-@keyframes mapPinPulse {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-4px); }
-}
-
-.map-pin-ring {
-    animation: mapRingPulse 3s ease-in-out infinite;
-    transform-origin: center;
-}
-
-@keyframes mapRingPulse {
-    0%, 100% { opacity: 0.4; transform: scale(1); }
-    50% { opacity: 0.15; transform: scale(1.4); }
+    border: 0;
+    display: block;
 }
 
 .map-content {
@@ -759,11 +728,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .map-pin,
-    .map-pin-ring {
-        animation: none;
-    }
-
     .form-submit.is-loading .btn-spinner {
         animation: none;
     }

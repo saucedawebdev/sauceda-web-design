@@ -84,7 +84,7 @@
                 </header>
 
                 <div class="contact-form-wrapper reveal">
-                    <form class="contact-form glass-card" id="contactForm" novalidate aria-describedby="form-error">
+                    <form class="contact-form glass-card" id="contactForm" action="https://formspree.io/f/xkolzkzq" method="POST" novalidate aria-describedby="formError">
                         <div class="form-alert form-alert--error" id="formError" role="alert" aria-live="assertive">
                             <svg class="form-alert-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
                             <span class="form-alert-text"></span>
@@ -199,8 +199,8 @@
                             <div class="form-success-icon" aria-hidden="true">
                                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
                             </div>
-                            <h3>Inquiry Sent Successfully</h3>
-                            <p>Thank you for reaching out! Your email client should open with your project details. I'll review your inquiry and respond within 24 hours.</p>
+                            <h3>Request Submitted Successfully</h3>
+                            <p>Thank you! Your request has been submitted successfully. I'll personally review your business and respond within one business day. If you requested a free homepage mockup, I'll begin reviewing your business before reaching out by email.</p>
                             <a href="mailto:ramon@saucedawebdesign.com" class="btn btn-secondary">Email Directly</a>
                         </div>
                     </form>
@@ -463,18 +463,15 @@
                     <h2 id="map-heading">Based in South Texas. Serving nationwide.</h2>
                 </header>
                 <div class="map-card reveal">
-                    <div class="map-visual" aria-hidden="true">
-                        <svg class="map-svg" viewBox="0 0 400 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M80 60 L340 40 L360 280 L60 300 Z" fill="rgba(37,99,235,0.04)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
-                            <path d="M120 100 L280 85 L300 240 L100 255 Z" fill="rgba(37,99,235,0.06)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
-                            <path d="M160 140 L240 130 L250 210 L150 218 Z" fill="rgba(37,99,235,0.1)" stroke="rgba(59,130,246,0.2)" stroke-width="1.5"/>
-                            <circle class="map-pin-ring" cx="200" cy="175" r="24" fill="rgba(37,99,235,0.15)" stroke="rgba(59,130,246,0.3)" stroke-width="1"/>
-                            <g class="map-pin">
-                                <path d="M200 155 C192 155 186 161 186 169 C186 179 200 195 200 195 C200 195 214 179 214 169 C214 161 208 155 200 155Z" fill="#2563EB" stroke="#3B82F6" stroke-width="1"/>
-                                <circle cx="200" cy="169" r="4" fill="#FFFFFF"/>
-                            </g>
-                            <text x="200" y="230" text-anchor="middle" fill="rgba(161,161,170,0.6)" font-size="11" font-family="Inter, sans-serif" letter-spacing="0.08em">RIO GRANDE VALLEY</text>
-                        </svg>
+                    <div class="map-visual">
+                        <iframe
+                            class="map-embed"
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d199275.67326255856!2d-97.80428006678343!3d26.304446574484018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1782756945659!5m2!1sen!2sus"
+                            title="Map showing Sauceda Web Design service area in the Rio Grande Valley, Texas"
+                            loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen
+                        ></iframe>
                     </div>
                     <div class="map-content">
                         <div class="map-location">

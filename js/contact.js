@@ -1,4 +1,6 @@
 (function () {
+    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xkolzkzq';
+
     const form = document.getElementById('contactForm');
     if (!form) return;
 
@@ -6,6 +8,11 @@
     const successPanel = document.getElementById('formSuccess');
     const errorAlert = document.getElementById('formError');
     const errorAlertText = errorAlert?.querySelector('.form-alert-text');
+
+    const SUBMIT_ERROR_MESSAGE =
+        'Something went wrong while submitting your request. Please try again or email me directly at ramon@saucedawebdesign.com.';
+
+    let isSubmitting = false;
 
     const fields = {
         firstName: { el: form.querySelector('#firstName'), required: true, label: 'First name' },
@@ -74,44 +81,70 @@
         errorAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
 
-    function buildMailtoBody(data) {
-        const lines = [
-            `Name: ${data.firstName} ${data.lastName}`,
-            `Business: ${data.businessName}`,
-            `Email: ${data.email}`,
-            data.phone ? `Phone: ${data.phone}` : null,
-            `Industry: ${data.industry}`,
-            `Project Type: ${data.projectType}`,
-            `Estimated Pages: ${data.pageCount}`,
-            data.currentWebsite ? `Current Website: ${data.currentWebsite}` : null,
-            data.budget ? `Budget: ${data.budget}` : null,
-            `Timeline: ${data.timeline}`,
-            '',
-            'Project Details:',
-            data.message
-        ].filter(Boolean);
-
-        return lines.join('\n');
+    function setSubmittingState(isLoading) {
+        isSubmitting = isLoading;
+        submitBtn.classList.toggle('is-loading', isLoading);
+        submitBtn.setAttribute('aria-busy', isLoading ? 'true' : 'false');
+        submitBtn.disabled = isLoading;
     }
 
-    function getFormData() {
-        return {
-            firstName: fields.firstName.el.value.trim(),
-            lastName: fields.lastName.el.value.trim(),
-            businessName: fields.businessName.el.value.trim(),
-            email: fields.email.el.value.trim(),
-            phone: fields.phone.el.value.trim(),
-            industry: fields.industry.el.value.trim(),
-            projectType: fields.projectType.el.value,
-            pageCount: fields.pageCount.el.value,
-            currentWebsite: fields.currentWebsite.el.value.trim(),
-            budget: fields.budget.el.value,
-            timeline: fields.timeline.el.value,
-            message: fields.message.el.value.trim()
-        };
+    function showSuccessState() {
+        form.classList.add('is-submitted');
+        successPanel?.classList.add('is-visible');
+        successPanel?.setAttribute('aria-hidden', 'false');
+        successPanel?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        if (successPanel) {
+            successPanel.setAttribute('tabindex', '-1');
+            successPanel.focus({ preventScroll: true });
+        }
     }
 
-    Object.keys(fields).forEach(key => {
+    /**
+     * Builds FormData for Formspree using the live form fields.
+     * Adds a readable subject line for inbox organization.
+     */
+    function buildFormspreePayload() {
+        const formData = new FormData(form);
+        const businessName = fields.businessName.el.value.trim();
+
+        formData.set('_subject', `Project Inquiry — ${businessName}`);
+        formData.set('_replyto', fields.email.el.value.trim());
+
+        return formData;
+    }
+
+    /**
+     * Sends the validated form to Formspree via fetch.
+     * Returns true on success, false on failure.
+     */
+    async function submitToFormspree(formData) {
+        const response = await fetch(FORMSPREE_ENDPOINT, {
+            method: 'POST',
+            headers: {
+                Accept: 'application/json'
+            },
+            body: formData
+        });
+
+        if (!response.ok) {
+            let errorDetail = '';
+
+            try {
+                const result = await response.json();
+                errorDetail = result?.error || result?.errors?.map((item) => item.message).join(' ') || '';
+            } catch (parseError) {
+                errorDetail = '';
+            }
+
+            console.error('Formspree submission failed:', response.status, errorDetail);
+            return false;
+        }
+
+        return true;
+    }
+
+    Object.keys(fields).forEach((key) => {
         const field = fields[key];
         const eventType = field.type === 'checkbox' ? 'change' : 'input';
 
@@ -123,8 +156,11 @@
         field.el.addEventListener('blur', () => validateField(key));
     });
 
-    form.addEventListener('submit', async (e) => {
-        e.preventDefault();
+    form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        if (isSubmitting) return;
+
         hideGlobalError();
 
         if (!validateForm()) {
@@ -134,26 +170,24 @@
             return;
         }
 
-        submitBtn.classList.add('is-loading');
-        submitBtn.setAttribute('aria-busy', 'true');
+        setSubmittingState(true);
 
-        const data = getFormData();
+        try {
+            const formData = buildFormspreePayload();
+            const didSubmit = await submitToFormspree(formData);
 
-        await new Promise(resolve => setTimeout(resolve, 900));
+            if (!didSubmit) {
+                showGlobalError(SUBMIT_ERROR_MESSAGE);
+                return;
+            }
 
-        const subject = encodeURIComponent(`Project Inquiry — ${data.businessName}`);
-        const body = encodeURIComponent(buildMailtoBody(data));
-        const mailto = `mailto:ramon@saucedawebdesign.com?subject=${subject}&body=${body}`;
-
-        window.location.href = mailto;
-
-        form.classList.add('is-submitted');
-        successPanel?.classList.add('is-visible');
-        successPanel?.setAttribute('aria-hidden', 'false');
-
-        submitBtn.classList.remove('is-loading');
-        submitBtn.setAttribute('aria-busy', 'false');
-
-        successPanel?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            form.reset();
+            showSuccessState();
+        } catch (error) {
+            console.error('Form submission error:', error);
+            showGlobalError(SUBMIT_ERROR_MESSAGE);
+        } finally {
+            setSubmittingState(false);
+        }
     });
 })();
