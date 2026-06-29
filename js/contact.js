@@ -39,7 +39,7 @@
 
         if (field.type === 'checkbox') {
             if (field.required && !el.checked) {
-                message = 'Please agree to be contacted regarding your project.';
+                message = 'Please agree to be contacted regarding your mockup request or website project.';
             }
         } else if (field.required && !el.value.trim()) {
             message = `${field.label} is required.`;
